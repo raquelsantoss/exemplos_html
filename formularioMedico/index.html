@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Agendamento de Consulta</title>
+  </head>
+  <body>
+    <section class="container">
+      <header>FORMULÁRIO PARA MARCAÇÃO DE CONSULTA</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Nome Completo</label>
+          <input type="text" placeholder="Digite seu nome completo" required />
+        </div>
+
+        <div class="input-box">
+          <label>Email</label>
+          <input type="text" placeholder="Digite seu email" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Telefone</label>
+            <input type="number" placeholder="21 98763454" required />
+          </div>
+          <div class="input-box">
+            <label>Data de Nascimeto</label>
+            <input type="date" placeholder="Entre com a data de nascimento" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Endereço</label>
+            <input type="text" placeholder="Digite seu endereço completo" required />
+          </div>
+          <div class="input-box">
+            <label>CEP</label>
+            <input type="number" placeholder="Ex: 098.786.657-23" required />
+          </div>
+        </div>
+        <div class="input-box address column">
+            <div class="select-box">
+              <select>
+                <option hidden>Especialidade</option>
+                <option>Cardiologista</option>
+                <option>Clínico Geral</option>
+                <option>Dermatologista</option>
+                <option>Ginecologista</option>
+                <option>Neurologista</option>
+                <option>Oftalmologista</option>
+                <option>Ortopedista</option>
+                <option>Otorrinolaringologista</option>
+                <option>Pediatra</option>
+                <option>Psiquiatra</option>
+                <option>Urologista</option>
+              </select>
+            </div>
+            <div class="select-box">
+              <select>
+                <option hidden>Alergia de Medicamentos</option>
+                <option>Antibióticos</option>
+                <option>Anti-inflamatórios</option>
+                <option>Analgésicos</option>
+                <option>Anticonvulsivantes</option>
+                <option>Quimioterápicos</option>
+                <option>Não possuo</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label>Data da consulta</label>
+              <input type="date" placeholder="Entre com a data desejada" required />
+            </div>
+            <div class="input-box">
+              <label>Observação</label>
+              <input type="text" placeholder="Caso tenha, digite uma observação" required />
+            </div>
+          </div>
+        </div>
+        <button>Enviar</button>
+      </form>
+    </section>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: #008B76;
+      }
+      .container {
+        position: relative;
+        max-width: 700px;
+        width: 100%;
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      .container header {
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 500;
+        text-align: center;
+      }
+      .container .form {
+        margin-top: 30px;
+      }
+      .form .input-box {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .input-box label {
+        color: #333;
+      }
+      .form :where(.input-box input, .select-box) {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #707070;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+      }
+      .input-box input:focus {
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+      }
+      .form .column {
+        display: flex;
+        column-gap: 15px;
+      }
+      .address :where(input, .select-box) {
+        margin-top: 15px;
+      }
+      .select-box select {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        color: #707070;
+        font-size: 1rem;
+      }
+      .form button {
+        height: 55px;
+        width: 100%;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 30px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: #008B76;
+      }
+      .form button:hover {
+        background: #006750;
+      }
+
+      @media screen and (max-width: 500px) {
+        .form .column {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </body>
+</html>
+
